@@ -557,7 +557,7 @@
             <div class="col-sm-6 col-lg-4">
               <div class="oh-desktop">
                 <!-- Services Terri-->
-                <article class="services-terri wow slideInUp">
+                <article id="togg1" class="services-terri wow slideInUp">
                   <div class="services-terri-figure">
                     <img
                       src="images/menuEnfant-370x278.jpeg"
@@ -568,15 +568,28 @@
                   </div>
                   <div class="services-terri-caption">
                     <span class="services-terri-icon linearicons-leaf"></span>
-                    <h5 class="services-terri-title"><a href="#">The Kid's One</a></h5>
+                    <h5 class="services-terri-title">The Kid's One</h5>
                   </div>
                 </article>
+                <div id="d1" style="display: none;">
+                  <br>
+                  <h4>Main : </h4>
+                  <p>Burger Patty or chicken nugget or Vegetebale patties</p>
+                  <!-- <p>(Beef meat or Chicken Meat - Eggs - flour or carrot - zucchini - potatoes - onions - eggs)</p> -->
+                  <p>French Fries or green bean or pasta (can mix)</p>
+                  
+                  <br>
+                  <h4>Dessert : </h4>
+                  <p>Vannila or Chocolate or Strawberries ice cream </p>
+                  <p>Chocolate Cake</p>
+                  <p>fresh fruit salad</p>
+                </div>
               </div>
             </div>
             <div class="col-sm-6 col-lg-4">
               <div class="oh-desktop">
                 <!-- Services Terri-->
-                <article class="services-terri wow slideInDown">
+                <article id="togg2" class="services-terri wow slideInDown">
                   <div class="services-terri-figure">
                     <img
                       src="images/BasicOneMenu.jpg"
@@ -587,15 +600,29 @@
                   </div>
                   <div class="services-terri-caption">
                     <span class="services-terri-icon linearicons-pizza"></span>
-                    <h5 class="services-terri-title"><a href="#">The Basic One</a></h5>
+                    <h5 class="services-terri-title">The Basic One</h5>
                   </div>
                 </article>
+                <div id="d2" style="display: none;">
+                  <br>
+                  <h4>Starter : </h4>
+                  <p>Mimosa Eggs or Paté en croûte </p>
+
+                  <br>
+                  <h4>Main : </h4>
+                  <p>Beef Steack or vege option </p>
+                  <p>French Fries or vegetables or rice</p>
+                  
+                  <br>
+                  <h4>Dessert : </h4>
+                  <p>Ile flottante or Crème bûlée </p>
+                </div>
               </div>
             </div>
             <div class="col-sm-6 col-lg-4">
               <div class="oh-desktop">
                 <!-- Services Terri-->
-                <article class="services-terri wow slideInUp">
+                <article id="togg3" class="services-terri wow slideInUp">
                   <div class="services-terri-figure">
                     <img
                       src="images/++OneMenu.jpg"
@@ -609,10 +636,23 @@
                       class="services-terri-icon linearicons-hamburger"
                     ></span>
                     <h5 class="services-terri-title">
-                      <a href="#">The ++ One</a>
+                      The ++ One
                     </h5>
                   </div>
                 </article>
+                <div id="d3" style="display: none;">
+                  <br>
+                  <h4>Starter : </h4>
+                  <p>Foie gras with french toast or French Snail </p>
+
+                  <br>
+                  <h4>Main : </h4>
+                  <p>Boeuf Bourguigon with mashed potatoes </p>
+                  
+                  <br>
+                  <h4>Dessert : </h4>
+                  <p>Profiteroles with chocolate sauce</p>
+                </div>
               </div>
             </div>
 
@@ -1498,3 +1538,41 @@
     <!-- coded by Himic-->
   </body>
 </html>
+<script>
+let togg1 = document.getElementById("togg1");
+let togg2 = document.getElementById("togg2");
+let togg3 = document.getElementById("togg3");
+let d1 = document.getElementById("d1");
+let d2 = document.getElementById("d2");
+let d3 = document.getElementById("d3");
+togg1.addEventListener("click", () => {
+  if(getComputedStyle(d1).display != "none"){
+    d1.style.display = "none";
+  } else {
+    d1.style.display = "block";
+    d2.style.display = "none";
+    d3.style.display = "none";
+  }
+})
+
+function togg(){
+  if(getComputedStyle(d2).display != "none"){
+    d2.style.display = "none";
+  } else {
+    d2.style.display = "block";
+    d1.style.display = "none";
+    d3.style.display = "none";
+  }
+};
+togg2.onclick = togg;
+
+togg3.addEventListener("click", () => {
+  if(getComputedStyle(d3).display != "none"){
+    d3.style.display = "none";
+  } else {
+    d3.style.display = "block";
+    d1.style.display = "none";
+    d2.style.display = "none";
+  }
+})
+</script>
